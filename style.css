@@ -20,15 +20,7 @@ h1, h2, h3 {
   font-weight: 600;
 }
 
-/* Main centered container */
-.container {
-	max-width: 900px;
-	margin: 0 auto; /* center on the page */
-	background-color: #ffffff;
-	padding: 20px;
-	border-radius: 8px;
-	box-shadow: 0 1px 3px rgba(0,0,0,0.06);
-}
+/* Main centered container (removed - not used in HTML) */
 
 /* Header inner content: center and add horizontal padding
    so text and images have margins from the viewport edges */
@@ -62,45 +54,17 @@ header p {
 	font-size: 0.95rem;
 }
 
-/* Simple navigation links */
-nav {
-	margin: 12px 0 18px 0;
-}
-nav a {
-	color: #0366d6;
-	text-decoration: none;
-	margin-right: 12px;
-}
-nav a:hover {
-	text-decoration: underline;
-}
+/* Generic nav rules removed — site uses .mobile-nav only */
 
-/* Paragraphs and lists spacing */
-main p,
-main li {
-	margin-bottom: 12px;
-}
+/* main P/L selectors removed — no <main> element present */
 
-/* Basic buttons (use <a class="button"> or <button class="button">) */
-.button {
-	display: inline-block;
-	padding: 8px 14px;
-	background-color: #28a745;
-	color: #fff;
-	border-radius: 6px;
-	text-decoration: none;
-	border: none;
-	cursor: pointer;
-}
-.button.secondary {
-	background-color: #6c757d;
-}
+/* Button helper classes removed (not used in HTML) */
 
 /* Footer */
 footer {
 	margin-top: 20px;
 	text-align: center;
-	color: #6b7280;
+	color: #ffffff;
 	font-size: 0.9rem;
 }
 
@@ -124,32 +88,34 @@ footer {
 		max-width: 100%;
 	}
 	/* Show mobile navigation on small screens */
-	.mobile-nav {
-		display: flex;
-		flex-wrap: wrap;
-		gap: 8px;
-		padding: 12px 0;
-		margin-bottom: 16px;
-		position: relative;
-		z-index: 10;
-	}
-	.mobile-nav a {
-		flex: 1;
-		min-width: 40px;
-		padding: 8px 6px;
-		background-color: rgba(59, 130, 246, 0.25);
-		color: #062877;
-		text-decoration: none;
-		text-align: center;
-		border-radius: 4px;
-		font-size: 0.85rem;
-		border: 1px solid #062877;
-		transition: background-color 0.3s ease;
-	}
-	.mobile-nav a:hover {
-		background-color: rgba(11, 107, 62, 0.6);
-		color: #ffffff;
-	}
+  .mobile-nav {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(56px, 1fr));
+    gap: 6px;
+    padding: 8px 0;
+    margin-bottom: 12px;
+    position: relative;
+    z-index: 10;
+    align-items: center;
+  }
+  .mobile-nav a {
+    padding: 6px 4px;
+    background-color: rgba(59, 130, 246, 0.22);
+    color: #0f172a;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 4px;
+    font-size: 0.78rem;
+    border: 1px solid rgba(59, 130, 246, 0.45);
+    transition: background-color 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .mobile-nav a:hover {
+    background-color: rgba(11, 107, 62, 0.6);
+    color: #ffffff;
+  }
 }
 
 section {
