@@ -13,16 +13,26 @@
   <!-- Header / Hero Section -->
   <header>
     <!-- Mobile Navigation -->
-    <nav class="mobile-nav">
-      <a href="#card-1968">1968</a>
-      <a href="#card-1971">1971</a>
-      <a href="#card-1978">1978</a>
-      <a href="#card-1985">1985</a>
-      <a href="#card-2006">2006</a>
-      <a href="#card-2020">2020</a>
-      <a href="#card-2022">2022</a>
-      <a href="#card-2023">2023</a>
-      <a href="#card-2024">2024</a>
+    <nav class="mobile-nav navbar navbar-expand-lg navbar-light bg-transparent">
+      <div class="container-fluid justify-content-end">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#timelineNav" aria-controls="timelineNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="timelineNav">
+          <div class="navbar-nav flex-wrap gap-2">
+            <a class="nav-link" href="#card-1968">1968</a>
+            <a class="nav-link" href="#card-1971">1971</a>
+            <a class="nav-link" href="#card-1978">1978</a>
+            <a class="nav-link" href="#card-1985">1985</a>
+            <a class="nav-link" href="#card-2006">2006</a>
+            <a class="nav-link" href="#card-2020">2020</a>
+            <a class="nav-link" href="#card-2022">2022</a>
+            <a class="nav-link" href="#card-2023">2023</a>
+            <a class="nav-link" href="#card-2024">2024</a>
+            <a class="nav-link" href="#steps-towards-sustainability">Steps Towards Sustainability</a>
+          </div>
+        </div>
+      </div>
     </nav>
     <div class="hero">
       <!-- Ask Copilot to teach you about `.svg`. 🙂 You'll need to resize the logo with CSS. -->
@@ -171,7 +181,7 @@
     </div>
     </section>
     <footer>Scroll to view timeline | Hover over cards to learn more!</footer>
-    <section class="grid-section">
+    <section class="grid-section" id="steps-towards-sustainability">
       <div class="container">
         <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-5">
           

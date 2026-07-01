@@ -90,51 +90,73 @@ footer {
 
 /* Small screens: reduce paddings and font sizes slightly */
 .mobile-nav {
-	display: none;
+  display: none;
+  width: 100%;
+  margin-bottom: 16px;
+  background-color: transparent;
+  box-shadow: none;
+}
+.mobile-nav .navbar-collapse,
+.mobile-nav .navbar-nav {
+  background-color: transparent;
+}
+.mobile-nav .navbar-collapse {
+  display: none !important;
+}
+.mobile-nav .navbar-collapse.show {
+  display: block !important;
+}
+.mobile-nav .navbar-nav {
+  display: none;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+}
+.mobile-nav .navbar-collapse.show .navbar-nav {
+  display: flex;
+}
+.mobile-nav .navbar-toggler {
+  display: none;
+  border-color: rgba(255, 255, 255, 0.35);
+  color: #ffffff;
+}
+.mobile-nav .navbar-toggler-icon {
+  filter: invert(0%);
+}
+.mobile-nav .nav-link {
+  padding: 0.45rem 0.75rem;
+  color: #ffffff;
+  border-radius: 6px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+.mobile-nav .nav-link:hover,
+.mobile-nav .nav-link.active {
+  background-color: rgba(32, 28, 234, 0.65);
+  color: #ffffff;
 }
 @media (max-width: 600px) {
-	body { padding: 12px; }
-	.container { padding: 16px; }
-	header h1 { font-size: 1.4rem; }
-	section {
-		flex-direction: column;
-		flex-wrap: wrap;
-		overflow-x: visible;
-		overflow-y: auto;
-	}
-	section > div {
-		flex: 0 0 auto;
-		min-width: 100%;
-		max-width: 100%;
-	}
-	/* Show mobile navigation on small screens */
   .mobile-nav {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(56px, 1fr));
-    gap: 6px;
-    padding: 8px 0;
-    margin-bottom: 12px;
-    position: relative;
-    z-index: 10;
-    align-items: center;
+    display: block;
   }
-  .mobile-nav a {
-    padding: 6px 4px;
-    background-color: rgba(59, 130, 246, 0.22);
-    color: #0f172a;
-    text-decoration: none;
-    text-align: center;
-    border-radius: 4px;
-    font-size: 0.78rem;
-    border: 1px solid rgba(59, 130, 246, 0.45);
-    transition: background-color 0.2s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  .mobile-nav .navbar-toggler {
+    display: inline-flex;
   }
-  .mobile-nav a:hover {
-    background-color: rgba(11, 107, 62, 0.6);
-    color: #ffffff;
+}
+@media (max-width: 600px) {
+  body { padding: 12px; }
+  .container { padding: 16px; }
+  header h1 { font-size: 1.4rem; }
+  section {
+    flex-direction: column;
+    flex-wrap: wrap;
+    overflow-x: visible;
+    overflow-y: auto;
+  }
+  section > div {
+    flex: 0 0 auto;
+    min-width: 100%;
+    max-width: 100%;
   }
 }
 
@@ -196,6 +218,17 @@ section.grid-section .row > .col {
   text-align: left;
   min-width: 280px;
   margin-right: 0;
+}
+
+@media (max-width: 991px) {
+  section.grid-section .row {
+    justify-content: center;
+  }
+  section.grid-section .row > .col {
+    flex: 1 1 100%;
+    max-width: 100%;
+    min-width: auto;
+  }
 }
 
 section.grid-section .row > .col h2 {
