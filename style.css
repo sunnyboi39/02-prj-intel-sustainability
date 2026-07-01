@@ -121,9 +121,6 @@ footer {
   border-color: rgba(255, 255, 255, 0.35);
   color: #ffffff;
 }
-.mobile-nav .navbar-toggler-icon {
-  filter: invert(0%);
-}
 .mobile-nav .nav-link {
   padding: 0.45rem 0.75rem;
   color: #ffffff;
@@ -142,8 +139,6 @@ footer {
   .mobile-nav .navbar-toggler {
     display: inline-flex;
   }
-}
-@media (max-width: 600px) {
   body { padding: 12px; }
   .container { padding: 16px; }
   header h1 { font-size: 1.4rem; }
